@@ -148,7 +148,7 @@ html {
 .image {
     position: absolute;
     right: 0; 
-    right: -20%;
+    right: -40%;
     top: 50%; 
     transform: translateY(-50%); 
     z-index: 10; 
