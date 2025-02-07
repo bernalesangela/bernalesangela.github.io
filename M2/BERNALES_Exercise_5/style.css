@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    color: #333;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#quoteDisplay {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+#author {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 1.2em;
+    color: #666;
+    display: block;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: 600;
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 3px 6px rgba(0, 123, 255, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #520dc2);
+    transform: scale(1.05);
+}
