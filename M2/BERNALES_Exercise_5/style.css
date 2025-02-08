@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    background: white;
+    background: rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -22,6 +22,9 @@ body {
     width: 90%;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 @keyframes fadeIn {
@@ -29,19 +32,24 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-#quoteDisplay {
+h1 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff; 
+}
+
+#quoteBox {
     font-family: 'Playfair Display', serif;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 700;
-    color: #222;
+    color: #fff; 
     margin-bottom: 15px;
 }
 
 #author {
     font-family: 'Poppins', sans-serif;
-    font-style: italic;
-    font-size: 1.2em;
-    color: #666;
+    font-size: 1em;
     display: block;
     margin-bottom: 20px;
 }
@@ -54,10 +62,9 @@ button {
     background: linear-gradient(135deg, #007bff, #6610f2);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 20px;
     box-shadow: 0 3px 6px rgba(0, 123, 255, 0.3);
 }
 
