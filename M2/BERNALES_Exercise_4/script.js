@@ -1,7 +1,5 @@
-// Replace with your WeatherAPI key
 const apiKey = "cbb0b276f1724b6fb1420151241811";
 
-// Change this to the city you want to search
 const city = "Manila";
 function callAPI() {
   const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
