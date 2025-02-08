@@ -1,0 +1,113 @@
+body, h1, h2, h3, table, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+.Header {
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    background-color: #800002;
+    color: #f5faff;
+    border-radius: 8px;
+    padding-right: 20px;
+}
+
+.Header img {
+    width: 300px;
+    height: auto;
+}
+
+.Header h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.Header h2 {
+    font-size: 20px;
+}
+
+.Name {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    padding-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #f5faff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #004080;
+    color: #f5faff;
+    text-align: center;
+}
+
+thead th {
+    padding: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ccc;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f7f6;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+    .Header {
+        text-align: center;
+        padding-right: 0;
+    }
+    .Header h1 {
+        font-size: 22px;
+    }
+    .Header h2 {
+        font-size: 18px;
+    }
+    .Name {
+        text-align: center;
+        padding-left: 0;
+    }
+    table {
+        font-size: 14px;
+    }
+    thead th {
+        padding: 10px;
+    }
+    tbody td {
+        padding: 8px;
+    }
+}
