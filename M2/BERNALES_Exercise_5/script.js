@@ -1,37 +1,32 @@
-
 const quoteElement = document.getElementById('quote');
 const authorElement = document.getElementById('author');
-const button = document.getElementById('newQuoteBtn');
-// Function to fetch a random quote
+const button = document.getElementById('btnNewQuote');
+
 function fetchQuote() {
-// Show loading message while fetching
-quoteElement.textContent = 'Loading quote...';
-authorElement.textContent = '';
-// Fetch all quotes from the DummyJSON API
-fetch('https://dummyjson.com/quotes')
-.then(response => {
-if (!response.ok) {
-throw new Error(`HTTP error! status: ${response.status}`);
+    quoteElement.textContent = 'Loading quote...';
+    authorElement.textContent = '';
+    fetch('https://dummyjson.com/quotes')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        const randomIndex = Math.floor(Math.random() * data.quotes.length);
+        const randomQuote = data.quotes[randomIndex];
+
+        quoteElement.textContent = `"${randomQuote.quote}"`;
+        authorElement.textContent = `- ${randomQuote.author}`;
+    })
+    .catch(error => {
+
+        console.error('Error fetching quote:', error);
+        quoteElement.textContent = 'Failed to load quote. Please try again.';
+        authorElement.textContent = '';
+    });
 }
-return response.json();
-})
-.then(data => {
-// Get a random quote from the list of quotes
-const randomIndex = Math.floor(Math.random() *
-data.quotes.length);
-const randomQuote = data.quotes[randomIndex];
-// Display the quote and author
-quoteElement.textContent = `"${randomQuote.quote}"`;
-authorElement.textContent = `- ${randomQuote.author}`;
-})
-.catch(error => {
-// Handle any errors that occur during the fetch
-console.error('Error fetching quote:', error);
-quoteElement.textContent = 'Failed to load quote. Please try again.';
-authorElement.textContent = '';
-});
-}
-// Fetch a quote when the button is clicked
+
 button.addEventListener('click', fetchQuote);
-// Fetch a quote when the page loads
+
 fetchQuote();
