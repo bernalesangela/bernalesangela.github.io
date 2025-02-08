@@ -5,35 +5,21 @@ body, h1, h2, h3, table, th, td {
 }
 
 body {
-    font-family: Poppins;
+    font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     color: #333;
     margin: 20px;
     line-height: 1.6;
+    text-align: center;
 }
 
 .Header {
     text-align: right;
     margin-bottom: 20px;
-    padding: 20px 0;
+    padding: 20px;
     background-color: #800002;
     color: #f5faff;
     border-radius: 8px;
-    padding-right: 20px;
-}
-
-.Header img {
-    width: 300px;
-    height: auto;
-}
-
-.Header h1 {
-    font-size: 26px;
-    margin-bottom: 5px;
-}
-
-.Header h2 {
-    font-size: 20px;
 }
 
 .Name {
@@ -46,9 +32,9 @@ body {
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 80%;
     margin: 0 auto;
+    border-collapse: collapse;
     background-color: #f5faff;
     border-radius: 8px;
     overflow: hidden;
@@ -58,14 +44,12 @@ table {
 thead {
     background-color: #004080;
     color: #f5faff;
-    text-align: center;
 }
 
-thead th {
-    padding: 15px;
-    font-size: 16px;
-    text-transform: uppercase;
-    border-bottom: 2px solid #ccc;
+thead th, tbody td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
 tbody tr:nth-child(even) {
@@ -74,13 +58,6 @@ tbody tr:nth-child(even) {
 
 tbody tr:nth-child(odd) {
     background-color: #ffffff;
-}
-
-tbody td {
-    padding: 12px;
-    text-align: center;
-    font-size: 14px;
-    border-bottom: 1px solid #ccc;
 }
 
 @media (max-width: 768px) {
@@ -103,6 +80,7 @@ tbody td {
     }
     table {
         font-size: 14px;
+        width: 100%;
     }
     thead th {
         padding: 10px;
