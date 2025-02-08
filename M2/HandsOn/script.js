@@ -21,5 +21,4 @@ function fetchCatImage() {
         .catch(error => console.log('error', error));
 }
 
-// Load an initial cat image on page load
 fetchCatImage();
